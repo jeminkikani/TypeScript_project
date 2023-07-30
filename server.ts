@@ -21,7 +21,9 @@ app.use(express.json())
 import userRouter from './Routes/user.Routes'
 app.use('/api/user' , userRouter)
 
-
+//productRoutes
+import productRouter from './Routes/product.Routes'
+app.use('/api/product' , productRouter)
 
 // server start
 app.listen(port ,()=>{

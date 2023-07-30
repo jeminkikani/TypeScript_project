@@ -6,7 +6,7 @@ import UserCollection from "../schemas/user.Schemas";
 
 export const getUser =async (req:Request , res:Response) => {
      try {
-        let theUSer: any = req.header['user'];
+        let theUSer: any = req.header['authorization'];
         theUSer = await jwt.verify(theUSer , process.env.SECRET_KEY as string)
         const UserId = theUSer.id;
         if(!UserId){
