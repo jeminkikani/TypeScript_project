@@ -116,7 +116,7 @@ exports.updateUser = async (req, res) => {
     if (!getUser) {
       return res.json({ msg: "user is not found...." });
     }
-    const theUSer: any = await utils.getUser(req, res);
+    // const theUSer: any = await utils.getUser(req, res);
     const updateuser: any = await utils.getUser(req, res);
     const user = await updateuser.save();
     if (user) {
