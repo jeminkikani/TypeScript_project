@@ -25,6 +25,13 @@ app.use('/api/user' , userRouter)
 import productRouter from './Routes/product.Routes'
 app.use('/api/product' , productRouter)
 
+// cartRoutes
+import cartRouter from './Routes/cart.Routes'
+app.use('/api/cart' ,cartRouter )
+
+
+
+
 // server start
 app.listen(port ,()=>{
     console.log(`server started At http://localhost:${port}`);
